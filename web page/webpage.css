@@ -1,0 +1,167 @@
+/* Resetting margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', serif; /* Font family */
+}
+
+/* Layout Styling */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header Styling */
+.header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative; /* Allow positioning of the sign-in button */
+}
+
+/* Sign In Button Styling */
+.sign-in-container {
+    position: absolute; /* Positioning it in the top right */
+    top: 20px;
+    right: 20px;
+}
+
+.sign-in-btn {
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.sign-in-btn:hover {
+    background-color: #005f73;
+}
+
+/* Navbar Styling */
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    display: block;
+}
+
+.navbar a:hover {
+    background-color: #575757;
+}
+
+/* Section Styling */
+.section {
+    padding: 20px;
+    background-color: #f4f4f4;
+    margin: 20px 0;
+    border-radius: 8px;
+}
+
+/* Main Content Styling */
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    opacity: 0; /* Start with the blog posts hidden */
+    animation: fadeIn 1s forwards; /* Fade in effect */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.blog-post {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s; /* Add transition for swapping effect */
+}
+
+.blog-post:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Blog Images */
+.blog-image {
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    transition: transform 0.3s; /* Add transition for enlarging effect */
+}
+
+.blog-image:hover {
+    transform: scale(1.2); /* Enlarge image on hover */
+}
+
+/* Adjusting space between text and button */
+.blog-post p {
+    margin-bottom: 15px;
+}
+
+/* Read More Button */
+.read-more-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.read-more-btn:hover {
+    background-color: #45a049;
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+    }
+
+    .navbar li {
+        margin: 10px 0;
+    }
+
+    .main-content {
+        grid-template-columns: 1fr;
+    }
+}
